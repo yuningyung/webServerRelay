@@ -71,7 +71,7 @@ void handleNotFound() {
 
 void RelayOn() {
   digitalWrite(relay, HIGH);
-  String message = "<html><head><meta charset=\"utf-8\"><title>Test</title></head>"
+  String message = "<html><head><meta charset=\"utf-8\"><title>Relay On</title></head>"
                   "<body>"
                   "<head>Relay On<head>"
                   "릴레이가 켜졌습니다."
@@ -81,7 +81,7 @@ void RelayOn() {
 
 void RelayOff() {
   digitalWrite(relay, LOW);
-  String message = "<html><head><meta charset=\"utf-8\"><title>Test</title></head>"
+  String message = "<html><head><meta charset=\"utf-8\"><title>Relay Off</title></head>"
                   "<body>"
                   "<head>Relay Off<head>"
                   "릴레이가 꺼졌습니다."
