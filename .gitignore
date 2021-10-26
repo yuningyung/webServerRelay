@@ -114,3 +114,9 @@
 .pio/build/esp12e/libdd6/libESP8266WebServer.a
 .pio/build/esp12e/libdd6/ESP8266WebServer/detail/mimetable.cpp.o
 .pio/build/esp12e/src/main.cpp.o
+.pio/build/esp12e/idedata.json
+.pio/build/esp12e/lib0b3/libESP8266HTTPClient.a
+.pio/build/esp12e/lib0b3/ESP8266HTTPClient/ESP8266HTTPClient.cpp.o
+.vscode/c_cpp_properties.json
+.vscode/extensions.json
+.vscode/launch.json

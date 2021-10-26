@@ -4,14 +4,18 @@
 
 const char* ssid = "U+Net43B0";
 const char* password = "DD9D033347";
+const int relay = 15;
 
 ESP8266WebServer server(80);
 
 void handleRoot();
 void handleNotFound();
+void RelayOn();
+void RelayOff();
 
 void setup() {
   // put your setup code here, to run once:
+  pinMode(relay, OUTPUT);
   Serial.begin(115200);
   WiFi.mode(WIFI_STA);
   WiFi.begin(ssid, password);
@@ -34,6 +38,9 @@ void setup() {
   server.on("/inline", []() {
     server.send(200, "text/plain", "Hello from the inline function\n");
   });
+
+  server.on("/RelayOn", RelayOn);
+  server.on("/RelayOff", RelayOff);
 
   server.onNotFound(handleNotFound);
 
@@ -60,4 +67,24 @@ void handleRoot() {
 void handleNotFound() {
   String message = "File Not Found\n\n";
   server.send(404, "text/plain", message);
+}
+
+void RelayOn() {
+  digitalWrite(relay, HIGH);
+  String message = "<html><head><meta charset=\"utf-8\"><title>Test</title></head>"
+                  "<body>"
+                  "<head>Relay On<head>"
+                  "릴레이가 켜졌습니다."
+                  "</body></html>";
+  server.send(200, "text/html", message);
+}
+
+void RelayOff() {
+  digitalWrite(relay, LOW);
+  String message = "<html><head><meta charset=\"utf-8\"><title>Test</title></head>"
+                  "<body>"
+                  "<head>Relay Off<head>"
+                  "릴레이가 꺼졌습니다."
+                  "</body></html>";
+  server.send(200, "text/html", message);
 }
