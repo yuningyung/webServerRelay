@@ -7,6 +7,12 @@ mDNS가 작동하지 않기 때문에 이것을 꼭 확인해야했다.
 ![image](https://user-images.githubusercontent.com/90883561/138927050-965201f3-def8-402f-af07-a096ab8906ab.png)
 
 
+wifi 동작 영상입니다.
+https://user-images.githubusercontent.com/90883561/139026231-f088ef5d-2a2c-4193-9a88-d17daa153e89.mp4
+
+
+
+
 
 
 192.168.219.104/RelayOn 을 검색했을 때
